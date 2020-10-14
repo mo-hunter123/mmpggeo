@@ -1,6 +1,6 @@
 <?php
 
-    define('ROOT_URL', '');
+    define('ROOT_URL', '/home.php');
 
     $host = "ec2-3-210-178-167.compute-1.amazonaws.com";
     $user = "rrqmofbqylycgy";
