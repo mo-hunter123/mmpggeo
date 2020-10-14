@@ -1,4 +1,7 @@
 <?php
+
+    define('ROOT_URL', '');
+
     $host = "ec2-3-210-178-167.compute-1.amazonaws.com";
     $username = "rrqmofbqylycgy";
     $password = "acb65373986e7dd39c61b86bcc8de1251c81fe03277517ea43a65d4f112bf9be";
