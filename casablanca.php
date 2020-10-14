@@ -28,7 +28,6 @@
             </dt>
         
         </dl>
-        <?php echo $city[1]; ?>
     </div>
 
 </div>
