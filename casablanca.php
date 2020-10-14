@@ -28,7 +28,7 @@
             </dt>
         
         </dl>
-        <?php echo $city[4]; ?>
+        <?php echo $city[1]; ?>
     </div>
 
 </div>
