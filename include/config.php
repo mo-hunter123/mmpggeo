@@ -30,14 +30,14 @@
     
 
     function TableSelect($pdo, $city){
-        $sql = "SELECT * FROM Cities WHERE Cities.cityName = '$city' ";
+        $sql = "SELECT * FROM Cities WHERE Cities.cityname = '$city' ";
         $q = $pdo->query($sql);
         $q->setFetchMode(PDO::FETCH_ASSOC);
         while($row = $q->fetch()){
-            $cityName = htmlspecialchars($row['cityName']);
-            $Longitude = htmlspecialchars($row['Longitude']);
-            $Latitude = htmlspecialchars($row['Latitude']);
-            $About = htmlspecialchars($row['About']);
+            $cityName = htmlspecialchars($row['cityname']);
+            $Longitude = htmlspecialchars($row['longitude']);
+            $Latitude = htmlspecialchars($row['latitude']);
+            $About = htmlspecialchars($row['about']);
             $url = htmlspecialchars($row['url']);
         }
         return array($cityName, $Longitude, $Latitude, $About, $url);
