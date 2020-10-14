@@ -66,6 +66,19 @@
         // }
     </script>
 
+
+    <?php
+        //echo 'This is Index Page';
+
+        $sql = 'SELECT * FROM Cities';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $rowCount = $stmt->rowCount();
+        $details = $stmt->fetch();
+
+        print_r ($details);
+    ?>
+
     <?php
             include "include/footer.php";
             echo "</body>\n</html>";
