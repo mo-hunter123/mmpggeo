@@ -51,34 +51,8 @@
             xhttp.send();
         }
 
-        // var x = document.getElementById("demo");
-        // function getLocation() {
-        //     if (navigator.geolocation) {
-        //         navigator.geolocation.getCurrentPosition(showPosition);
-        //     } else {
-        //         x.innerHTML = "Geolocation is not supported by this browser.";
-        //     }
-        // }
-
-        // function showPosition(position) {
-        //     x.innerHTML = "Latitude: " + position.coords.latitude +
-        //     "<br>Longitude: " + position.coords.longitude;
-        // }
+        
     </script>
-
-
-    <?php
-        $sql = "SELECT * FROM Cities WHERE Cities.cityName = '$city' ";
-        $query = mysqli_query($con, $sql);
-        while($row = mysqli_fetch_assoc($query)){
-            $cityName = $row['cityName'];
-            $Longitude = $row['Longitude'];
-            $Latitude = $row['Latitude'];
-            $About = $row['About'];
-            $url = $row['url'];
-        }
-        print_r($cityName);
-    ?>
 
     <?php
             include "include/footer.php";

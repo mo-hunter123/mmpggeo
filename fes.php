@@ -2,7 +2,7 @@
 
 <?php
 
-    $city = TableSelect($con, 'Fes');
+    $city = TableSelect($pdo, 'Fes');
 
 ?>
 

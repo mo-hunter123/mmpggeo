@@ -3,7 +3,7 @@
 
 <?php
 
-    $city = TableSelect($con, 'CasaBlanca');
+    $city = TableSelect($pdo, 'CasaBlanca');
 
 ?>
 <div class="container">

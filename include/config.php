@@ -29,15 +29,16 @@
       }
     
 
-    function TableSelect($con, $city){
+    function TableSelect($pdo, $city){
         $sql = "SELECT * FROM Cities WHERE Cities.cityName = '$city' ";
-        $query = mysqli_query($con, $sql);
-        while($row = mysqli_fetch_assoc($query)){
-            $cityName = $row['cityName'];
-            $Longitude = $row['Longitude'];
-            $Latitude = $row['Latitude'];
-            $About = $row['About'];
-            $url = $row['url'];
+        $q = $pdo->query($sql);
+        $q->setFetchMode(PDO::FETCH_ASSOC);
+        while($row = $q->fetch()){
+            $cityName = htmlspecialchars($row['cityName']);
+            $Longitude = htmlspecialchars($row['Longitude']);
+            $Latitude = htmlspecialchars($row['Latitude']);
+            $About = htmlspecialchars($row['About']);
+            $url = htmlspecialchars($row['url']);
         }
         return array($cityName, $Longitude, $Latitude, $About, $url);
     

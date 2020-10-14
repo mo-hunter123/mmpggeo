@@ -2,7 +2,7 @@
 
 <?php
 
-    $city = TableSelect($con, 'Rabat');
+    $city = TableSelect($pdo, 'Rabat');
 
 ?>
 <div class="container">
