@@ -68,15 +68,16 @@
 
 
     <?php
-        //echo 'This is Index Page';
-
-        $sql = 'SELECT * FROM Cities';
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-        $rowCount = $stmt->rowCount();
-        $details = $stmt->fetch();
-
-        print_r ($details);
+        $sql = "SELECT * FROM Cities WHERE Cities.cityName = '$city' ";
+        $query = mysqli_query($con, $sql);
+        while($row = mysqli_fetch_assoc($query)){
+            $cityName = $row['cityName'];
+            $Longitude = $row['Longitude'];
+            $Latitude = $row['Latitude'];
+            $About = $row['About'];
+            $url = $row['url'];
+        }
+        print_r($cityName);
     ?>
 
     <?php
